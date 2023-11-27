@@ -1,0 +1,13 @@
+{%extends 'cakebox/base.html'%}
+
+{%block body_block%}
+    <div class="container d-flex flex-column align-items-center justify-content-center mt-5">
+        <form action="" method="post" enctype="multipart/form-data" class=" border shadow p-5">
+            <h1 class="align-items-center">Cakes</h1>
+
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type="submit" value="Add">
+        </form>
+    </div>
+{%endblock%}

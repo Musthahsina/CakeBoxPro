@@ -1,0 +1,91 @@
+1)registration
+================
+
+url:http://127.0.0.1:8000/api/register/
+method:post
+body:{"username","password","email","phone","address"}
+authorization:nill
+
+
+==========================
+
+2)cakes list api
+
+url:http://127.0.0.1:8000/api/cakes/
+method:get
+authorization:nill
+
+======================================
+
+3)cakes detail
+
+url :http://127.0.0.1:8000/api/cakes/2/
+
+method:get
+
+4)add to cart api
+
+url:http://127.0.0.1:8000/api/cakes/{varient_id}/cart_add/
+
+method:post
+
+authorization:username,password
+body:nill
+
+5)list cart items
+
+url:http://127.0.0.1:8000/api/carts/
+method:get
+authorization:username,password
+body:nill
+
+6)remove item frm cart
+url:http://127.0.0.1:8000/api/carts/{cartid}/
+method:delete
+authorization:username,password
+body:nill
+
+
+7)place order
+
+url:http://127.0.0.1:8000/api/cakes/{varient_id}/place_order/
+
+method:post
+
+authorization:username,password
+body:address
+
+
+8)list orders
+url:http://127.0.0.1:8000/api/orders/
+method:get
+body:nill
+headers:username,password
+
+
+9)remove orders
+url:http://127.0.0.1:8000/api/orders/{id}/
+method:delete
+body:nill
+headers:username,password
+
+10)obtain token 
+url:http://127.0.0.1:8000/api/token/
+method:post
+body:username,password
+
+
+11)add_review
+
+    url:http://127.0.0.1:8000/api/cakes/{cake_id}/add_review/
+
+    method:post
+
+    body:rating,comment
+    headers:Token
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+{%extends 'cakebox/base.html'%}
+
+{%block body_block%}
+    <div class="container mt-5">
+        <h1>Cakes</h1>
+        <table class="table table-striped">
+            <tr>
+                <td>Category</td>
+                <td>Name</td>
+                <td>image</td>
+                <td>Action</td>
+            </tr>
+            {%for ck in cakes%}
+
+            <tr>
+                <td>{{ck.category.name}}</td>
+                <td>{{ck.name}}</td>
+                
+                <td>
+                  <img src="{{ck.image.url}}" alt="" width="200px" height="200px" style="object-fit: contain;">
+                </td>
+                <td>
+                    <a href="{%url 'cake-remove' ck.id %}" class="ms-3 text-danger"><i class="fa-solid fa-trash"></i></a>
+                    <a href="{%url 'add-varient' ck.id %}" class="ms-3 text-success"><i class="fa-regular fa-square-plus"></i></a>
+                    <a href="{%url 'cake-detail' ck.id%}" class="ms-3 text-warning"><i class="fa-solid fa-eye"></i></a>
+                </td>
+            </tr>
+
+            {%endfor%}
+        </table>
+    </div>
+    
+{%endblock%}

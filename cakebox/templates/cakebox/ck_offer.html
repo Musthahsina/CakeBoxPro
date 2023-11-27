@@ -1,0 +1,18 @@
+{%extends 'cakebox/base.html'%}
+
+{%block body_block%}
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6 mt-5">
+                <form action="" method="post" enctype="multipart/form-data" class="border shadow p-5">
+                    <h1 class="align-items-center">Add offer</h1>
+                    {%csrf_token%}
+                    {{form.as_p}}
+                    <button type="submit" class="btn btn-outline-success">Add</button>
+                </form>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+{%endblock%}
